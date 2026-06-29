@@ -16,7 +16,7 @@ function CircleCard({ number, label, delay }) {
       transition={{ duration: 0.6, delay }}
       className="flex flex-col items-center"
     >
-      <div className="relative flex h-36 w-36 items-center justify-center">
+      <div className="relative flex h-28 w-28 sm:h-36 sm:w-36 items-center justify-center">
         <svg className="absolute inset-0 h-full w-full -rotate-90" viewBox="0 0 160 160">
           <circle
             cx="80"
@@ -42,7 +42,7 @@ function CircleCard({ number, label, delay }) {
           />
         </svg>
         <div className="text-center">
-          <span className="block text-3xl font-light tracking-tight text-[var(--charcoal)]">
+          <span className="block text-2xl sm:text-3xl font-light tracking-tight text-[var(--charcoal)]">
             {number}
           </span>
           <span className="mt-1 block text-[10px] uppercase tracking-[3px] text-neutral-400">
@@ -75,7 +75,7 @@ export default function Countdown() {
           </h2>
         </motion.div>
 
-        <div className="mt-20 flex justify-center gap-8 md:gap-16">
+        <div className="mt-20 grid grid-cols-2 gap-6 md:flex md:justify-center md:gap-16">
           <CircleCard number={days} label="Días" delay={0.1} />
           <CircleCard number={hours} label="Horas" delay={0.2} />
           <CircleCard number={minutes} label="Minutos" delay={0.3} />
