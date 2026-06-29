@@ -1,54 +1,58 @@
-import wedding from "../../data/wedding";
+import { motion } from "framer-motion";
 
+import wedding from "../../data/wedding";
 import EventCard from "./EventCard";
 
 export default function Event() {
-  return (
-    <section className="bg-[#F8F6F3] py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <p className=" text-center uppercase tracking-[6px] text-[var(--gold)] ">
-          Nuestro Gran Día
-        </p>
+  const events = [wedding.event.ceremony, wedding.event.reception];
 
-        <h2
-          className="mt-6 text-center text-6xl "
-          style={{
-            fontFamily: "Cormorant Garamond",
-          }}
+  return (
+    <section className="bg-[var(--cream)] py-32">
+      <div className="mx-auto max-w-6xl px-6">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center text-xs uppercase tracking-[6px] text-[var(--gold)]"
         >
-          28         
-          AGOSTO          
-          2026
-        </h2>
+          Nuestro Gran Día
+        </motion.p>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="mt-4 text-center text-6xl font-display text-[var(--charcoal)] leading-[1.15]"
+        >
+          <span className="block">Veintiocho</span>
+          <span className="block text-2xl tracking-[8px] text-[var(--gold)] uppercase mt-2">
+            Agosto — 2026
+          </span>
+        </motion.h2>
 
         <div className="relative mt-24">
-          {/* Línea central - solo en desktop */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[var(--gold)] md:block" />
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-[var(--gold)] to-transparent md:block" />
 
-          <div className="grid gap-16 md:grid-cols-2">
-            <div className="relative">
-              <div className="absolute -right-8 top-1/2 hidden h-4 w-4 -translate-y-1/2 rounded-full bg-[var(--gold)] md:block" />
+          <div className="grid gap-12 md:grid-cols-2">
+            {events.map((event, index) => (
+              <div key={index} className="relative">
+                <div
+                  className={`absolute top-1/2 hidden h-3 w-3 -translate-y-1/2 rounded-full border-2 border-[var(--gold)] bg-white md:block ${
+                    index === 0 ? "-right-1.5" : "-left-1.5"
+                  }`}
+                />
 
-              <EventCard
-                icon="⛪"
-                title={wedding.event.ceremony.title}
-                hour={wedding.event.ceremony.hour}
-                place={wedding.event.ceremony.place}
-                address={wedding.event.ceremony.address}
-              />
-            </div>
-
-            <div className="relative">
-              <div className="absolute -left-8 top-1/2 hidden h-4 w-4 -translate-y-1/2 rounded-full bg-[var(--gold)] md:block" />
-
-              <EventCard
-                icon="🥂"
-                title={wedding.event.reception.title}
-                hour={wedding.event.reception.hour}
-                place={wedding.event.reception.place}
-                address={wedding.event.reception.address}
-              />
-            </div>
+                <EventCard
+                  icon={index === 0 ? "⛪" : "🥂"}
+                  title={event.title}
+                  hour={event.hour}
+                  place={event.place}
+                  address={event.address}
+                  index={index}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -2,6 +2,8 @@ const wedding = {
   bride: "Natalia",
   groom: "Felipe",
 
+  sheetWebhook: "https://sheet.best/api/sheets/TU_SHEET_ID",
+
   date: "28 Agosto 2026",
 
   ceremonyTime: "4:00 PM",
@@ -90,7 +92,55 @@ venue: {
         "https://maps.google.com/...",
 },
 
-dressCode: {
+envelope: {
+    title: "Lluvia de Sobres",
+    message:
+      "Tu presencia es el mejor regalo, pero si deseas bendecirnos con un detalle adicional, aquí tienes nuestra información.",
+    accounts: [
+      {
+        bank: "Bancolombia",
+        type: "Cuenta de Ahorros",
+        number: "000-000000-00",
+        holder: "Natalia & Felipe",
+        document: "CC 1.234.567",
+      },
+    ],
+  },
+
+  gallery: [
+    {
+      src: "/gallery/gallery-1.jpg",
+      alt: "Preparativos de la ceremonia",
+      aspect: "4/5",
+    },
+    {
+      src: "/gallery/gallery-2.jpg",
+      alt: "Decoración del evento",
+      aspect: "3/4",
+    },
+    {
+      src: "/gallery/gallery-3.jpg",
+      alt: "Momentos en familia",
+      aspect: "1/1",
+    },
+    {
+      src: "/gallery/gallery-4.jpg",
+      alt: "Detalles especiales",
+      aspect: "4/6",
+    },
+    {
+      src: "/gallery/gallery-5.jpg",
+      alt: "Amanecer del gran día",
+      aspect: "16/9",
+    },
+    {
+      src: "/gallery/gallery-6.jpg",
+      alt: "Celebración",
+      aspect: "3/4",
+    },
+  ],
+
+    dressCode: {
     title: "Formal Elegante",
 
     description:
@@ -104,6 +154,18 @@ dressCode: {
         "#B49A7A",
         "#4B4B4B"
     ]
+},
+
+message: {
+
+title:"Con mucho cariño",
+
+text:
+
+"Más que una celebración, queremos compartir con quienes más queremos uno de los días más importantes de nuestra vida. Gracias por acompañarnos en este nuevo capítulo.",
+
+signature:"Natalia & Felipe"
+
 }
 };
 

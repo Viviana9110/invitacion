@@ -1,7 +1,7 @@
 import InvitationBackground from "./InvitationBackground";
 import InvitationCard from "./InvitationCard";
 
-export default function InvitationCover({ onOpen }) {
+export default function InvitationCover({ guestName, onOpen }) {
   return (
     <section
       className="
@@ -15,7 +15,7 @@ export default function InvitationCover({ onOpen }) {
     >
       <InvitationBackground />
 
-      <InvitationCard onOpen={onOpen} />
+      <InvitationCard guestName={guestName} onOpen={onOpen} />
     </section>
   );
 }

@@ -1,83 +1,58 @@
 import { motion } from "framer-motion";
-import { Shirt, Gem } from "lucide-react";
 
 import wedding from "../../data/wedding";
 import ColorPalette from "./ColorPalette";
 
 export default function DressCode() {
   return (
-    <section className="bg-[#F8F6F3] py-32">
-
+    <section className="relative overflow-hidden bg-[var(--cream)] py-32">
       <div className="mx-auto max-w-5xl px-6 text-center">
-
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-
-          <p className="uppercase tracking-[6px] text-[var(--gold)]">
+          <p className="text-xs uppercase tracking-[6px] text-[var(--gold)]">
             Dress Code
           </p>
 
-          <h2
-            className="mt-6 text-6xl"
-            style={{
-              fontFamily: "Cormorant Garamond",
-            }}
-          >
+          <h2 className="mt-4 text-5xl font-display text-[var(--charcoal)] leading-tight">
             Elegancia para celebrar
           </h2>
-
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: .2 }}
-          className="mt-20 flex items-center justify-center gap-8"
+          transition={{ delay: 0.2 }}
+          className="mx-auto mt-16 max-w-2xl"
         >
+          <div className="rounded-[28px] border border-[var(--border)] bg-white p-10 shadow-sm">
+            <h3 className="text-3xl font-display text-[var(--charcoal)]">
+              {wedding.dressCode.title}
+            </h3>
 
-          <Shirt size={42} />
+            <div className="mx-auto mt-6 h-px w-12 bg-[var(--gold)]" />
 
-          <Gem size={22} className="text-[var(--gold)]" />
+            <p className="mt-6 leading-relaxed text-neutral-500">
+              {wedding.dressCode.description}
+            </p>
 
-          <Shirt size={42} />
+            <p className="mt-10 text-xs uppercase tracking-[4px] text-neutral-400">
+              Colores sugeridos
+            </p>
 
+            <ColorPalette colors={wedding.dressCode.palette} />
+
+            <div className="mx-auto mt-10 max-w-md rounded-2xl border border-dashed border-[var(--gold-light)] bg-[var(--cream)] px-6 py-4">
+              <p className="text-sm text-neutral-500">
+                {wedding.dressCode.avoid}
+              </p>
+            </div>
+          </div>
         </motion.div>
-
-        <h3
-          className="mt-8 text-4xl"
-          style={{
-            fontFamily: "Cormorant Garamond",
-          }}
-        >
-          {wedding.dressCode.title}
-        </h3>
-
-        <p className="mx-auto mt-8 max-w-xl leading-8 text-neutral-600">
-          {wedding.dressCode.description}
-        </p>
-
-        <p className="mt-12 text-sm uppercase tracking-[4px] text-neutral-500">
-    Colores sugeridos
-</p>
-
-        <ColorPalette
-          colors={wedding.dressCode.palette}
-        />
-
-        <div className="mx-auto mt-16 max-w-lg rounded-3xl border border-[var(--border)] bg-white p-8">
-
-          <p className="text-neutral-600">
-            {wedding.dressCode.avoid}
-          </p>
-
-        </div>
-
       </div>
-
     </section>
   );
 }
