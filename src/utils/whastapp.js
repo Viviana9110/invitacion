@@ -1,4 +1,4 @@
-const BASE_URL = "https://tusitio.com";
+const BASE_URL = "https://invitacion-lime-seven.vercel.app";
 
 export function whatsAppLink(guestName, phone) {
   const url = `${BASE_URL}?guest=${encodeURIComponent(guestName)}`;
