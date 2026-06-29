@@ -8,11 +8,8 @@ function getGuestName() {
 export async function submitRSVP(formData) {
   const payload = {
     nombre: formData.name,
-    email: formData.email || "",
-    acompanantes: formData.attendance ? formData.guests : 0,
-    restricciones: formData.diet || "",
-    mensaje: formData.message || "",
     asistencia: formData.attendance ? "Sí" : "No",
+    mensaje: formData.message || "",
     invitado: getGuestName(),
     timestamp: new Date().toISOString(),
   };

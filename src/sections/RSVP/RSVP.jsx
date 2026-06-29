@@ -37,7 +37,7 @@ export default function RSVP() {
           ¿Podrás acompañarnos?
         </motion.h2>
 
-        <AttendanceSelector onSelect={setAttendance} />
+        <AttendanceSelector selected={attendance} onSelect={setAttendance} />
 
         {attendance !== null && (
           <RSVPForm

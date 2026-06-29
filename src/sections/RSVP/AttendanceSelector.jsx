@@ -1,22 +1,43 @@
 import { Heart, Frown } from "lucide-react";
-import Button from "../../ui/Button";
 
-export default function AttendanceSelector({
-  onSelect,
-}) {
+export default function AttendanceSelector({ selected, onSelect }) {
   return (
     <div className="mt-16 flex justify-center gap-6">
-      <Button onClick={() => onSelect(true)} aria-label="Confirmar asistencia">
-        <span className="flex items-center gap-2">
-          <Heart className="h-4 w-4" /> Sí
-        </span>
-      </Button>
+      <button
+        onClick={() => onSelect(true)}
+        disabled={selected === false}
+        className={`
+          flex items-center gap-2 rounded-full px-10 py-4 text-sm uppercase tracking-[4px] transition-all duration-300
+          ${
+            selected === true
+              ? "bg-black text-white shadow-lg"
+              : selected === false
+                ? "cursor-not-allowed bg-neutral-100 text-neutral-300"
+                : "border border-neutral-300 text-neutral-700 hover:border-neutral-900"
+          }
+        `}
+        aria-label="Confirmar asistencia"
+      >
+        <Heart size={16} /> Sí
+      </button>
 
-      <Button variant="secondary" onClick={() => onSelect(false)} aria-label="No podré asistir">
-        <span className="flex items-center gap-2">
-          <Frown className="h-4 w-4" /> No
-        </span>
-      </Button>
+      <button
+        onClick={() => onSelect(false)}
+        disabled={selected === true}
+        className={`
+          flex items-center gap-2 rounded-full px-10 py-4 text-sm uppercase tracking-[4px] transition-all duration-300
+          ${
+            selected === false
+              ? "bg-black text-white shadow-lg"
+              : selected === true
+                ? "cursor-not-allowed bg-neutral-100 text-neutral-300"
+                : "border border-neutral-300 text-neutral-700 hover:border-neutral-900"
+          }
+        `}
+        aria-label="No podré asistir"
+      >
+        <Frown size={16} /> No
+      </button>
     </div>
   );
 }
