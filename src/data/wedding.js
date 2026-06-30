@@ -2,7 +2,7 @@ const wedding = {
   bride: "Natalia",
   groom: "Felipe",
 
-  sheetWebhook: "https://api.sheetbest.com/sheets/b519174c-468b-4c1f-b8e1-6202e73ccf1d",
+  sheetWebhook: "https://api.sheetbest.com/sheets/638dc4e9-729e-430b-a6ce-f0b14e7ac5d7",
 
   date: "28 Agosto 2026",
 
