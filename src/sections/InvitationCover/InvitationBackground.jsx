@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+import heroImage from "../../assets/images/hero.jpg";
+
 const PARTICLES = Array.from({ length: 20 }, (_, i) => ({
   id: i,
   left: ((i * 17 + 5) % 100),
@@ -14,8 +16,7 @@ export default function InvitationBackground() {
       <div
         className="absolute inset-0 scale-110 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('/src/assets/images/hero.jpg')",
+          backgroundImage: `url(${heroImage})`,
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
