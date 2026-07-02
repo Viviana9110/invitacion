@@ -25,7 +25,7 @@ const wedding = {
 
     text:"Todo comenzó con una conversación que nunca imaginamos cambiaría nuestras vidas.",
 
-    image:"/story/story-1.jpg"
+    image:"/images/story/nosconocimos.jpg"
 
 },
 {
@@ -36,7 +36,7 @@ const wedding = {
 
     text:"Descubrimos que los mejores recuerdos siempre eran juntos.",
 
-    image:"/story/story-2.jpg"
+    image:"/images/story/viaje.jpg"
 
 },
 {
@@ -47,7 +47,7 @@ const wedding = {
 
     text:"En el lugar perfecto llegó la pregunta más importante de nuestras vidas.",
 
-    image:"/story/story-3.jpg"
+    image:"/images/story/si.jpg"
 
 },
 ],
