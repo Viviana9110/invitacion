@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 
 import heroImage from "../../assets/images/hero.jpg";
 
-const PARTICLES = Array.from({ length: 20 }, (_, i) => ({
+const SPARKLES = Array.from({ length: 30 }, (_, i) => ({
   id: i,
-  left: ((i * 17 + 5) % 100),
-  top: ((i * 13 + 11) % 100),
-  delay: (i * 0.3) % 5,
-  duration: 3 + ((i * 1.5) % 4),
+  x: ((i * 37 + 11) % 100),
+  y: ((i * 29 + 7) % 100),
+  delay: (i * 0.4) % 6,
+  duration: 4 + ((i * 1.2) % 4),
+  size: 1.5 + ((i * 0.5) % 2),
 }));
 
 export default function InvitationBackground() {
@@ -21,17 +22,27 @@ export default function InvitationBackground() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
 
-      {PARTICLES.map((p) => (
+      {SPARKLES.map((p) => (
         <motion.div
           key={p.id}
-          className="absolute h-1 w-1 rounded-full bg-white/30"
+          className="absolute rounded-full"
           style={{
-            left: `${p.left}%`,
-            top: `${p.top}%`,
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            width: p.size,
+            height: p.size,
+            background:
+              p.id % 3 === 0
+                ? "radial-gradient(circle, rgba(212,197,171,0.8), transparent)"
+                : "rgba(255,255,255,0.3)",
+            boxShadow:
+              p.id % 3 === 0
+                ? "0 0 4px 1px rgba(212,197,171,0.4)"
+                : "none",
           }}
           animate={{
-            y: [0, -30, 0],
-            opacity: [0, 0.8, 0],
+            y: [0, -40 - (p.id % 20), 0],
+            opacity: [0, 0.6, 0],
           }}
           transition={{
             duration: p.duration,

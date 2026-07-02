@@ -44,7 +44,6 @@ export default function Event() {
                 />
 
                 <EventCard
-                  icon={index === 0 ? "⛪" : "🥂"}
                   title={event.title}
                   hour={event.hour}
                   place={event.place}

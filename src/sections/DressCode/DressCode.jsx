@@ -28,7 +28,7 @@ export default function DressCode() {
           transition={{ delay: 0.2 }}
           className="mx-auto mt-16 max-w-2xl"
         >
-          <div className="rounded-[28px] border border-[var(--border)] bg-white p-10 shadow-sm">
+          <div className="rounded-[28px] border border-[var(--gold-light)]/50 bg-white p-10 shadow-sm">
             <h3 className="text-3xl font-display text-[var(--charcoal)]">
               {wedding.dressCode.title}
             </h3>

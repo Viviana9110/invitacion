@@ -2,19 +2,37 @@ import { motion } from "framer-motion";
 import Button from "../../ui/Button";
 import wedding from "../../data/wedding";
 
-function Monogram() {
+function WaxSeal() {
   return (
     <motion.div
       initial={{ scale: 0, rotate: -180 }}
       animate={{ scale: 1, rotate: 0 }}
-      transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-      className="relative mx-auto mb-8 flex h-20 w-20 items-center justify-center"
+      transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
+      className="relative mx-auto mb-8 flex h-22 w-22 items-center justify-center"
     >
-      <div className="absolute inset-0 rounded-full border border-white/20" />
-      <div className="absolute inset-2 rounded-full border border-white/10" />
-      <span className="font-display text-2xl tracking-widest text-white">
-        N<span className="mx-1 text-xs text-white/60">&</span>F
+      <motion.div
+        animate={{ rotate: [0, 5, -5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-0 rounded-full"
+        style={{
+          background:
+            "radial-gradient(circle at 35% 35%, #d4c5ab, #b49a7a 40%, #8a7358 70%, #6b5943)",
+          boxShadow: "0 4px 20px rgba(139,115,85,0.5), inset 0 1px 0 rgba(255,255,255,0.2)",
+        }}
+      />
+      <motion.div
+        className="absolute inset-1 rounded-full border border-[var(--gold-light)]/30"
+      />
+      <motion.div
+        className="absolute inset-3 rounded-full border border-[var(--gold-dark)]/20"
+      />
+      <span className="relative z-10 font-display text-xl tracking-widest text-[var(--cream)] drop-shadow-sm">
+        N<span className="mx-0.5 text-xs text-[var(--gold-light)]">&</span>F
       </span>
+      <motion.div
+        className="absolute -bottom-1 left-1/2 h-3 w-1 -translate-x-1/2 rounded-full"
+        style={{ background: "linear-gradient(to top, #8a7358, transparent)" }}
+      />
     </motion.div>
   );
 }
@@ -22,9 +40,9 @@ function Monogram() {
 export default function InvitationCard({ guestName, onOpen }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60, scale: 0.95 }}
+      initial={{ opacity: 0, y: 80, scale: 0.92 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{ duration: 1.4, ease: [0.25, 0.1, 0.25, 1] }}
       className="
         relative
         z-20
@@ -46,7 +64,7 @@ export default function InvitationCard({ guestName, onOpen }) {
         before:shadow-[inset_0_1px_0_rgba(255,255,255,0.3)]
       "
     >
-      <Monogram />
+      <WaxSeal />
 
       <motion.p
         initial={{ opacity: 0, y: 10 }}
@@ -67,8 +85,8 @@ export default function InvitationCard({ guestName, onOpen }) {
         <motion.span
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
-          className="mx-3 inline-block text-3xl text-white/60"
+          transition={{ delay: 1.2, type: "spring", stiffness: 200, damping: 12 }}
+          className="mx-3 inline-block text-3xl text-[var(--gold-light)]"
         >
           &
         </motion.span>

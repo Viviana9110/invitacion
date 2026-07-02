@@ -37,6 +37,16 @@ export default function RSVP() {
           ¿Podrás acompañarnos?
         </motion.h2>
 
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-4 text-neutral-400 max-w-md mx-auto"
+        >
+          Tus palabras quedarán guardadas en nuestro libro de recuerdos
+        </motion.p>
+
         <AttendanceSelector selected={attendance} onSelect={setAttendance} />
 
         {attendance !== null && (

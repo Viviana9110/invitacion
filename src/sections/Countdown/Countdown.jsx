@@ -41,14 +41,20 @@ function CircleCard({ number, label, delay }) {
             transition={{ duration: 1.5, delay: delay + 0.3, ease: "easeOut" }}
           />
         </svg>
-        <div className="text-center">
+        <motion.div
+          key={number}
+          initial={{ scale: 1.3, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.3 }}
+          className="text-center"
+        >
           <span className="block text-2xl sm:text-3xl font-light tracking-tight text-[var(--charcoal)]">
             {number}
           </span>
           <span className="mt-1 block text-[10px] uppercase tracking-[3px] text-neutral-400">
             {label}
           </span>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );
@@ -59,6 +65,12 @@ export default function Countdown() {
 
   return (
     <section className="relative overflow-hidden bg-white py-32">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.015">
+        <div className="h-full w-full" style={{
+          backgroundImage: `radial-gradient(circle at 30% 40%, var(--gold) 0%, transparent 50%)`,
+        }} />
+      </div>
+
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

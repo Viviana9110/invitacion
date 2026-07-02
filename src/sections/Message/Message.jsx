@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 import wedding from "../../data/wedding";
 import image from "../../assets/images/message/message.jpg";
 
+const PETALS = Array.from({ length: 12 }, (_, i) => ({
+  id: i,
+  x: 5 + ((i * 27 + 13) % 90),
+  delay: i * 1.5,
+  duration: 8 + (i % 6),
+  size: 6 + (i % 4),
+}));
+
 export default function Message() {
   return (
     <section className="relative overflow-hidden">
@@ -15,6 +23,34 @@ export default function Message() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
       </div>
+
+      {PETALS.map((p) => (
+        <motion.div
+          key={p.id}
+          className="absolute z-10 rounded-full"
+          style={{
+            left: `${p.x}%`,
+            top: -20,
+            width: p.size,
+            height: p.size,
+            background:
+              "radial-gradient(ellipse at 30% 30%, rgba(212,197,171,0.4), rgba(180,154,122,0.1))",
+            filter: "blur(1px)",
+          }}
+          animate={{
+            y: [0, 800],
+            x: [0, (p.id % 3 - 1) * 40],
+            opacity: [0, 0.6, 0.3, 0],
+            rotate: [0, 180 + p.id * 30],
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            delay: p.delay,
+            ease: "linear",
+          }}
+        />
+      ))}
 
       <div className="relative z-10 mx-auto max-w-2xl px-6 py-40">
         <motion.div
