@@ -4,9 +4,9 @@ const wedding = {
 
   sheetWebhook: "https://api.sheetbest.com/sheets/638dc4e9-729e-430b-a6ce-f0b14e7ac5d7",
 
-  date: "28 Agosto 2026",
+  date: "28 / 08 / 2026",
 
-  ceremonyTime: "4:00 PM",
+  ceremonyTime: "3:30 PM",
 
   receptionTime: "6:00 PM",
 
@@ -51,14 +51,14 @@ const wedding = {
 
 },
 ],
-dateISO: "2026-08-28T15:00:00",
+dateISO: "2026-08-28T15:30:00",
 event: {
 
     ceremony:{
 
         title:"Ceremonia",
 
-        hour:"3:00 PM",
+        hour:"3:30 PM",
 
         place:"Iglesia La Inmaculada",
 
@@ -146,13 +146,11 @@ envelope: {
     description:
         "Queremos que nos acompañes con un estilo elegante y cómodo para disfrutar juntos de este día tan especial.",
 
-    avoid: "El color blanco estará reservado para la novia.",
+    avoid: "El color blanco y beige estan reservados para los novios.",
 
     palette: [
-        "#F4EFE8",
-        "#A8B59F",
-        "#B49A7A",
-        "#4B4B4B"
+        "#EDE8D0",
+        "#FFFFF"
     ]
 },
 

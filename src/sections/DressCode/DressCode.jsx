@@ -13,7 +13,7 @@ export default function DressCode() {
           viewport={{ once: true }}
         >
           <p className="text-xs uppercase tracking-[6px] text-[var(--gold)]">
-            Dress Code
+            Codigo de Vestuario
           </p>
 
           <h2 className="mt-4 text-5xl font-display text-[var(--charcoal)] leading-tight">
@@ -40,16 +40,12 @@ export default function DressCode() {
             </p>
 
             <p className="mt-10 text-xs uppercase tracking-[4px] text-neutral-400">
-              Colores sugeridos
+              Colores reservados para los novios
             </p>
 
             <ColorPalette colors={wedding.dressCode.palette} />
 
-            <div className="mx-auto mt-10 max-w-md rounded-2xl border border-dashed border-[var(--gold-light)] bg-[var(--cream)] px-6 py-4">
-              <p className="text-sm text-neutral-500">
-                {wedding.dressCode.avoid}
-              </p>
-            </div>
+            
           </div>
         </motion.div>
       </div>

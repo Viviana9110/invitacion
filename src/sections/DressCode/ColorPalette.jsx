@@ -1,8 +1,6 @@
 const COLOR_NAMES = {
-  "#F4EFE8": "Marfil",
-  "#A8B59F": "Salvia",
-  "#B49A7A": "Dorado",
-  "#4B4B4B": "Carbón",
+  "#EDE8D0": "Beige",
+  "#FFFFF": "Blanco",
 };
 
 export default function ColorPalette({ colors }) {
