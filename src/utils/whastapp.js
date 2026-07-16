@@ -2,7 +2,7 @@ const BASE_URL = "https://invitacion-lime-seven.vercel.app";
 
 export function whatsAppLink(guestName, phone) {
   const url = `${BASE_URL}?guest=${encodeURIComponent(guestName)}`;
-  const message = `¡Hola ${guestName}! 💌\n\nHas sido invitado a la boda de Natalia & Felipe. Aquí tienes tu invitación personalizada:\n\n${url}\n\n¡Te esperamos! ✨`;
+  const message = `¡Hola ${guestName}! \n\nHas sido invitado a la boda de Natalia & Felipe. Aquí tienes tu invitación:\n\n${url}\n\n¡Te esperamos!`;
 
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }
