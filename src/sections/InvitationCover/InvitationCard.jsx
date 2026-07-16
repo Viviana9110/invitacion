@@ -26,7 +26,7 @@ function WaxSeal() {
       <motion.div
         className="absolute inset-3 rounded-full border border-[var(--gold-dark)]/20"
       />
-      <span className="relative z-10 font-display text-xl tracking-widest text-[var(--cream)] drop-shadow-sm">
+      <span className="relative z-10 font-display text-3xl tracking-widest text-[var(--cream)] drop-shadow-sm">
         N<span className="mx-0.5 text-xs text-[var(--gold-light)]">&</span>F
       </span>
       <motion.div
@@ -72,7 +72,7 @@ export default function InvitationCard({ guestName, onOpen }) {
         transition={{ delay: 0.6 }}
         className="tracking-[8px] text-xs uppercase text-white/60"
       >
-        Wedding Experience
+        NUESTRA BODA
       </motion.p>
 
       <motion.h1

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import heroImage from "../../assets/images/hero.jpg";
+import heroImage from "../../assets/images/hero.png";
 
 const SPARKLES = Array.from({ length: 30 }, (_, i) => ({
   id: i,

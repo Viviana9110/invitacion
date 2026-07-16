@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import wedding from "../../data/wedding";
-import image from "../../assets/images/message/message.jpg";
+import image from "../../assets/gallery/Pre (5).jpg";
 
 const PETALS = Array.from({ length: 12 }, (_, i) => ({
   id: i,

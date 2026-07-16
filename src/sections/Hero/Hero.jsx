@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { useRef } from "react";
 
 import wedding from "../../data/wedding";
-import heroImage from "../../assets/images/hero.jpg";
+import heroImage from "../../assets/images/hero.png";
 
 const FLOATING_ORBS = Array.from({ length: 8 }, (_, i) => ({
   id: i,

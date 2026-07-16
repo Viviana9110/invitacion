@@ -52,47 +52,19 @@ export default function Envelope() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="mx-auto max-w-md rounded-[28px] border border-[var(--border)] bg-[var(--cream)] p-8 shadow-sm"
+              className=""
             >
               <p className="text-xs uppercase tracking-[4px] text-[var(--gold)]">
                 {account.bank}
               </p>
               <p className="mt-1 text-sm text-neutral-400">{account.type}</p>
 
-              <div className="mt-6 flex items-center justify-center gap-3">
-                <code className="select-all rounded-xl bg-white px-5 py-3 text-lg font-medium tracking-wider text-[var(--charcoal)] border border-[var(--border)]">
-                  {account.number}
-                </code>
-
-                <button
-                  onClick={() => copyToClipboard(account.number, index)}
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white border border-[var(--border)] transition hover:bg-neutral-100"
-                  aria-label="Copiar número de cuenta"
-                >
-                  {copiedIndex === index ? (
-                    <Check size={18} className="text-green-600" />
-                  ) : (
-                    <Copy size={18} className="text-neutral-400" />
-                  )}
-                </button>
-              </div>
-
-              <div className="mt-6 space-y-1 text-sm text-neutral-400">
-                <p><span className="text-neutral-500">Titular:</span> {account.holder}</p>
-                <p><span className="text-neutral-500">Documento:</span> {account.document}</p>
-              </div>
+             
             </motion.div>
           ))}
         </div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mt-16 text-sm text-neutral-300"
-        >
-          Infinitas gracias por tu generosidad
-        </motion.p>
+       
       </div>
     </section>
   );

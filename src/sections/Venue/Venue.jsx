@@ -56,12 +56,7 @@ export default function Venue() {
           transition={{ duration: 0.8 }}
           className="mt-16 overflow-hidden rounded-[28px] border border-white/10"
         >
-          <div className="flex aspect-[16/9] items-center justify-center bg-white/[0.05]">
-            <div className="text-center">
-              <MapPin size={32} className="mx-auto text-[var(--gold-light)]/50" />
-              <p className="mt-4 text-sm text-white/30">Mapa del lugar</p>
-            </div>
-          </div>
+          
         </motion.div>
 
         <motion.div
@@ -72,7 +67,12 @@ export default function Venue() {
           className="mx-auto mt-16 max-w-xl"
         >
           <h3 className="text-4xl text-white font-display">
-            {wedding.venue.name}
+            {wedding.venue.name.split("\n").map((line, i, arr) => (
+              <span key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </span>
+            ))}
           </h3>
 
           <p className="mt-4 text-sm uppercase tracking-[3px] text-white/40">

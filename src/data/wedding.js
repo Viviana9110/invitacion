@@ -1,42 +1,49 @@
+import pre1 from "../assets/gallery/Pre (1) (1).jpg";
+import pre3 from "../assets/gallery/Pre (3).jpg";
+import pre7 from "../assets/gallery/Pre (7).jpg";
+import foto1 from "../assets/gallery/1 (1).png";
+import foto5 from "../assets/gallery/1 (5).png";
+import foto7 from "../assets/gallery/1 (7).png";
+
 const wedding = {
   bride: "Natalia",
   groom: "Felipe",
 
   sheetWebhook: "https://api.sheetbest.com/sheets/638dc4e9-729e-430b-a6ce-f0b14e7ac5d7",
 
-  date: "28 / 08 / 2026",
+  date: "28 - 08 - 26",
 
-  ceremonyTime: "3:30 PM",
+  ceremonyTime: "3:15 PM",
 
-  receptionTime: "6:00 PM",
+  receptionTime: "5:00 PM",
 
   phrase:
-    "Cada historia de amor es hermosa, pero la nuestra es nuestra favorita.",
+    "Nuestro para siempre comienza aquí",
 
-  location: "Hacienda La Estancia",
+  location: "Recepción, Sede Campestre la Uribe,\nSalón Primavera",
 
   city: "Manizales, Colombia",
 
   story : [
   {
-    year:"2019",
+    year:"2023",
 
     title:"Nos conocimos",
 
-    text:"Todo comenzó con una conversación que nunca imaginamos cambiaría nuestras vidas.",
+    text:"No fue amor a primera vista, fue conexión a primera charla.",
 
-    image:"/images/story/nosconocimos.jpg"
+    image:"/images/story/nosconocimos.jpeg"
 
 },
 {
 
-    year:"2021",
+    year:"2025",
 
     title:"Nuestro primer viaje",
 
-    text:"Descubrimos que los mejores recuerdos siempre eran juntos.",
+    text:"Entre risas, planes, viajes y miles de momentos que hoy son nuestros recuerdos favoritos.",
 
-    image:"/images/story/viaje.jpg"
+    image:"/images/story/viaje.jpeg"
 
 },
 {
@@ -45,43 +52,30 @@ const wedding = {
 
     title:"El gran sí",
 
-    text:"En el lugar perfecto llegó la pregunta más importante de nuestras vidas.",
+    text:"Elegimos construir un nosotros, y hoy celebramos el comienzo de nuestra mejor aventura.",
 
     image:"/images/story/si.jpg"
 
 },
 ],
-dateISO: "2026-08-28T15:30:00",
+dateISO: "2026-08-28T15:15:00",
 event: {
-
-    ceremony:{
-
-        title:"Ceremonia",
-
-        hour:"3:30 PM",
-
-        place:"Iglesia La Inmaculada",
-
-        address:"Manizales"
-
-    },
-
-    reception:{
-
-        title:"Recepción",
-
-        hour:"6:00 PM",
-
-        place:"Lugar de la Recepcion",
-
-        address:"Manizales"
-
-    }
-
+    ceremony: "2:45 PM",
+    reception: "4:30 PM",
+    timeline: [
+      { hour: "2:45 PM", title: "Ceremonia", place: "Basilica Menor de la Inmaculada Concepción", icon: "Church" },
+      { hour: "4:30 PM", title: "Recepción", place: "Sede Campestre la Uribe, Salón Primavera", icon: "Wine" },
+      { hour: "4:45 PM", title: "Brindis y palabras de bienvenida", icon: "MessageCircle" },
+      { hour: "5:30 PM", title: "Servicio de Cena", icon: "UtensilsCrossed" },
+      { hour: "6:30 PM", title: "Corte del Pastel", icon: "Cake" },
+      { hour: "7:00 PM", title: "Lanzamiento del Ramo", icon: "Flower2" },
+      { hour: "7:30 PM", title: "Primer baile de los novios", icon: "Users" },
+      { hour: "8:30 PM", title: "Despedida de los novios y cierre del evento", icon: "Heart" },
+    ],
 },
 
 venue: {
-    name: "Lugar del matrimonio",
+    name: "Sede Campestre la Uribe,\nSalón Primavera",
 
     address: "Manizales, Caldas",
 
@@ -89,54 +83,44 @@ venue: {
         "Rodeados de naturaleza celebraremos uno de los días más importantes de nuestra vida.",
 
     maps:
-        "https://maps.google.com/...",
+        "https://maps.app.goo.gl/qh77nX3wKtTknGmSA?g_st=iw",
 },
 
 envelope: {
-    title: "Lluvia de Sobres",
+    title: "",
     message:
-      "Tu presencia es el mejor regalo, pero si deseas bendecirnos con un detalle adicional, aquí tienes nuestra información.",
+      "El mejor regalo será compartir este día con ustedes. Si desean tener un detalle adicional, una  será bienvenida con mucho cariño.",
     accounts: [
       {
-        bank: "Bancolombia",
-        type: "Cuenta de Ahorros",
-        number: "000-000000-00",
-        holder: "Natalia & Felipe",
-        document: "CC 1.234.567",
+        
       },
     ],
   },
 
   gallery: [
     {
-      src: "/gallery/gallery-1.jpg",
-      alt: "Preparativos de la ceremonia",
-      aspect: "4/5",
+      src: pre1,
+      alt: "Siempre unidos",
     },
     {
-      src: "/gallery/gallery-2.jpg",
-      alt: "Decoración del evento",
-      aspect: "3/4",
+      src: pre3,
+      alt: "Promesa eterna",
     },
     {
-      src: "/gallery/gallery-3.jpg",
-      alt: "Momentos en familia",
-      aspect: "1/1",
+      src: pre7,
+      alt: "Juntos bajo el velo",
     },
     {
-      src: "/gallery/gallery-4.jpg",
-      alt: "Detalles especiales",
-      aspect: "4/6",
+      src: foto1,
+      alt: "Cariño en cada mirada",
     },
     {
-      src: "/gallery/gallery-5.jpg",
-      alt: "Amanecer del gran día",
-      aspect: "16/9",
+      src: foto5,
+      alt: "Páginas favoritas",
     },
     {
-      src: "/gallery/gallery-6.jpg",
-      alt: "Celebración",
-      aspect: "3/4",
+      src: foto7,
+      alt: "Mirando al futuro",
     },
   ],
 
@@ -150,7 +134,9 @@ envelope: {
 
     palette: [
         "#EDE8D0",
-        "#FFFFF"
+        "#FFFFF",
+        "#FFC5D3",
+        "#FF00FF"
     ]
 },
 

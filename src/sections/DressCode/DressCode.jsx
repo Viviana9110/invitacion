@@ -40,7 +40,7 @@ export default function DressCode() {
             </p>
 
             <p className="mt-10 text-xs uppercase tracking-[4px] text-neutral-400">
-              Colores reservados para los novios
+              Colores reservados
             </p>
 
             <ColorPalette colors={wedding.dressCode.palette} />

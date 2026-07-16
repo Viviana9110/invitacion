@@ -29,7 +29,14 @@ export default function EventCard({ title, hour, place, address, index }) {
       </div>
 
       <div className="mt-8 space-y-2 text-neutral-500">
-        <p className="font-medium text-neutral-700">{place}</p>
+        <p className="font-medium text-neutral-700">
+          {place.split("\n").map((line, i, arr) => (
+            <span key={i}>
+              {line}
+              {i < arr.length - 1 && <br />}
+            </span>
+          ))}
+        </p>
         <p className="text-sm">{address}</p>
       </div>
     </motion.div>
