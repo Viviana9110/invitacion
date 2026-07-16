@@ -5,7 +5,7 @@ import AttendanceSelector from "./AttendanceSelector";
 import RSVPForm from "./RSVPForm";
 import ThankYou from "./ThankYou";
 
-export default function RSVP() {
+export default function RSVP({ guestName }) {
   const [attendance, setAttendance] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
@@ -52,6 +52,7 @@ export default function RSVP() {
         {attendance !== null && (
           <RSVPForm
             attendance={attendance}
+            guestName={guestName}
             onSuccess={() => setSubmitted(true)}
           />
         )}

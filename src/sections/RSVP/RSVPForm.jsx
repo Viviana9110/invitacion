@@ -3,8 +3,8 @@ import { Loader2, Feather } from "lucide-react";
 
 import { submitRSVP } from "../../services/rsvp";
 
-export default function RSVPForm({ attendance, onSuccess }) {
-  const [form, setForm] = useState({ name: "", message: "" });
+export default function RSVPForm({ attendance, guestName, onSuccess }) {
+  const [form, setForm] = useState({ message: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -17,7 +17,7 @@ export default function RSVPForm({ attendance, onSuccess }) {
     setError(null);
 
     try {
-      await submitRSVP({ ...form, attendance });
+      await submitRSVP({ name: guestName, ...form, attendance });
       onSuccess();
     } catch {
       setError("Ocurrió un error al enviar. Intenta de nuevo.");
@@ -44,16 +44,9 @@ export default function RSVPForm({ attendance, onSuccess }) {
         </div>
 
         <div className="space-y-5">
-          <div>
-            <label htmlFor="rsvp-name" className="sr-only">Nombre</label>
-            <input
-              id="rsvp-name"
-              value={form.name}
-              onChange={updateField("name")}
-              placeholder="Tu nombre"
-              required
-              className="w-full rounded-2xl border-0 bg-[var(--cream)] p-4 text-center outline-none transition focus:ring-2 focus:ring-[var(--gold-light)]"
-            />
+          <div className="rounded-2xl bg-[var(--cream)] p-4 text-center">
+            <p className="text-xs uppercase tracking-[3px] text-neutral-400 mb-1">Invitado/a</p>
+            <p className="text-lg font-display text-[var(--charcoal)]">{guestName}</p>
           </div>
 
           <div>

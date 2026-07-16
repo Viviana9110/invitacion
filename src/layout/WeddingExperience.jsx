@@ -11,10 +11,12 @@ import Message from "../sections/Message/Message.jsx";
 import Footer from "../sections/Footer/Footer.jsx";
 
 import SectionDivider from "../components/SectionDivider";
+import MusicPlayer from "../ui/MusicPlayer";
 
-export default function WeddingExperience() {
+export default function WeddingExperience({ guestName }) {
   return (
     <>
+      <MusicPlayer />
       <Hero />
       <SectionDivider />
       <Story />
@@ -25,7 +27,7 @@ export default function WeddingExperience() {
       <Gallery />
       <DressCode />
       <Message />
-      <RSVP />
+      <RSVP guestName={guestName} />
       <Footer />
     </>
   );

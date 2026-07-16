@@ -41,7 +41,7 @@ function App() {
             onOpen={() => setOpened(true)}
           />
         ) : (
-          <WeddingExperience />
+          <WeddingExperience guestName={guestName} />
         )}
       </AnimatePresence>
     </>
