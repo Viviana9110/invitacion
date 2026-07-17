@@ -70,13 +70,13 @@ export default function Hero() {
 
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
-        className="relative z-10 flex flex-col items-center text-center text-white"
+        className="relative z-10 flex flex-col items-center px-6 text-center text-white"
       >
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="tracking-[8px] text-xs uppercase text-white/60"
+          className="tracking-[4px] sm:tracking-[8px] text-[10px] sm:text-xs uppercase text-white/60"
         >
           {wedding.date}
         </motion.p>
@@ -86,7 +86,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <h1 className="mt-8 text-7xl font-light leading-[1.15] font-display">
+          <h1 className="mt-4 sm:mt-8 text-5xl sm:text-7xl font-light leading-[1.15] font-display">
             <span className="block">{wedding.bride}</span>
             <motion.span
               initial={{ scale: 0 }}
@@ -104,7 +104,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-8 max-w-lg text-lg leading-relaxed text-white/70 font-light"
+          className="mt-6 sm:mt-8 max-w-xs sm:max-w-lg text-base sm:text-lg leading-relaxed text-white/70 font-light"
         >
           {wedding.phrase}
         </motion.p>

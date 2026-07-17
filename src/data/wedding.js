@@ -39,7 +39,7 @@ const wedding = {
 
     year:"2025",
 
-    title:"Nuestro primer viaje",
+    title:"Nuestros viajes",
 
     text:"Entre risas, planes, viajes y miles de momentos que hoy son nuestros recuerdos favoritos.",
 
@@ -89,7 +89,7 @@ venue: {
 envelope: {
     title: "",
     message:
-      "El mejor regalo será compartir este día con ustedes. Si desean tener un detalle adicional, una  será bienvenida con mucho cariño.",
+      "El mejor regalo será compartir este día con ustedes. Si desean tener un detalle adicional, lluvia de sobres será bienvenida con mucho cariño.",
     accounts: [
       {
         

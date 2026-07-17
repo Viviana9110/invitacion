@@ -43,7 +43,7 @@ export default function InvitationCard({ guestName, onOpen }) {
       initial={{ opacity: 0, y: 80, scale: 0.92 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1.4, ease: [0.25, 0.1, 0.25, 1] }}
-      className="
+        className="
         relative
         z-20
         w-[92%]
@@ -52,7 +52,8 @@ export default function InvitationCard({ guestName, onOpen }) {
         border
         border-white/20
         bg-white/10
-        p-12
+        p-8
+        sm:p-12
         text-center
         shadow-2xl
         backdrop-blur-xl
