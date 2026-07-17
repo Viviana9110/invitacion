@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import heroImage from "../../assets/images/hero.png";
+import heroImage from "../../assets/images/hero-cropped.png";
 
 const SPARKLES = Array.from({ length: 30 }, (_, i) => ({
   id: i,
@@ -15,7 +15,7 @@ export default function InvitationBackground() {
   return (
     <>
       <div
-        className="absolute inset-0 bg-cover bg-top sm:bg-center"
+        className="absolute inset-0 scale-110 bg-cover bg-center"
         style={{
           backgroundImage: `url(${heroImage})`,
         }}
