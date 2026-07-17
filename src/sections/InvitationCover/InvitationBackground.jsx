@@ -15,7 +15,7 @@ export default function InvitationBackground() {
   return (
     <>
       <div
-        className="absolute inset-0 scale-110 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-top sm:bg-center"
         style={{
           backgroundImage: `url(${heroImage})`,
         }}

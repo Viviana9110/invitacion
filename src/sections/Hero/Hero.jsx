@@ -32,12 +32,12 @@ export default function Hero() {
     >
       <motion.div
         style={{ y: imageY }}
-        className="absolute inset-0 scale-110"
+        className="absolute inset-0"
       >
         <img
           src={heroImage}
           alt="Natalia y Felipe"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover sm:object-center object-top"
         />
       </motion.div>
 
