@@ -2,7 +2,7 @@ const COLOR_NAMES = {
   "#EDE8D0": "Beige",
   "#FFFFF": "Blanco",
   "#FFC5D3": "Rosa",
-  "#D9017E": "Fucsia"
+  "#FF00FF": "Fucsia"
 };
 
 export default function ColorPalette({ colors }) {
