@@ -3,7 +3,8 @@ import { ChevronDown } from "lucide-react";
 import { useRef } from "react";
 
 import wedding from "../../data/wedding";
-import heroImage from "../../assets/images/hero-cropped.png";
+import heroImage from "../../assets/images/hero.png";
+import heroMobile from "../../assets/images/hero-mobile.png";
 
 const FLOATING_ORBS = Array.from({ length: 8 }, (_, i) => ({
   id: i,
@@ -34,11 +35,14 @@ export default function Hero() {
         style={{ y: imageY }}
         className="absolute inset-0 scale-110"
       >
-        <img
-          src={heroImage}
-          alt="Natalia y Felipe"
-          className="h-full w-full object-cover"
-        />
+        <picture>
+          <source media="(max-width: 639px)" srcSet={heroMobile} />
+          <img
+            src={heroImage}
+            alt="Natalia y Felipe"
+            className="h-full w-full object-cover"
+          />
+        </picture>
       </motion.div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
