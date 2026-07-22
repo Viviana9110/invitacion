@@ -58,7 +58,7 @@ const guests = [
 { name: "Andrea, Samy y Jhonathan", phone: "573107111011" },
 { name: "Leidy Jhoana Cárdenas y Marcela Caceres", phone: "56963186372" },
 { name: "María Cristina", phone: "573166441106" },
-{ name: "Daniel Felipe Giraldo H.", phone: "573137541410" },
+{ name: "Daniel Felipe Giraldo H.", phone: "573137544110" },
 { name: "Marcely Rodríguez y Oscar Mauricio Rios", phone: "573159289991" },
 { name: "María Cristina Aristizábal y Jorge Hernán Osorio", phone: "573137158754" },
 { name: "Mónica Castaño López y Mariano Medina", phone: "573134555765" },
