@@ -48,7 +48,7 @@ const guests = [
 { name: "Orlando Cárdenas y Beatriz Eugenia", phone: "56983063929" },
 { name: "Viviana Londoño", phone: "573137622767" },
 { name: "Nelly Guevara y Gonzalo Cárdenas", phone: "573183761381" },
-{ name: "Tía Paula y Javier Arroyave", phone: "57Javier Arroyave " },
+{ name: "Tía Paula y Javier Arroyave", phone: "573128810450" },
 { name: "Tía Cristina y Jairo Agudelo", phone: "573053830276" },
 { name: "Alejandra Puerta, Martina Restrepo, Zoraida Cardenas y Honorio", phone: "573024633347" },
 { name: "Valentina Rios Calle", phone: "573024259759" },
@@ -57,7 +57,7 @@ const guests = [
 
 { name: "Herlinda Gómez de Rios", phone: "573113807308" },
 { name: "Jose Mauricio Rios G y Rut", phone: "573146685029" },
-{ name: "Andrea, Samy y Jhonthan", phone: "573107111011" },
+{ name: "Andrea, Samy y Jhonathan", phone: "573107111011" },
 { name: "Leidy Jhoana Cárdenas y Marcela Caceres", phone: "56963186372" },
 { name: "María Cristina", phone: "573166441106" },
 { name: "Daniel Felipe Giraldo H.", phone: "573137541410" },
