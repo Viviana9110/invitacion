@@ -136,7 +136,7 @@ envelope: {
         "#EDE8D0",
         "#FFFFF",
         "#FFC5D3",
-        "#FF00FF"
+        "#FF99FF"
     ]
 },
 
