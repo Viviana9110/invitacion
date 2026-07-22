@@ -17,9 +17,21 @@ export default function MusicPlayer() {
 
     tryPlay();
 
-    const handler = () => tryPlay();
-    document.addEventListener("click", handler, { once: true });
-    return () => document.removeEventListener("click", handler);
+    const clickHandler = () => tryPlay();
+    document.addEventListener("click", clickHandler, { once: true });
+
+    const visibilityHandler = () => {
+      if (document.visibilityState === "hidden") {
+        audio.pause();
+        setPlaying(false);
+      }
+    };
+    document.addEventListener("visibilitychange", visibilityHandler);
+
+    return () => {
+      document.removeEventListener("click", clickHandler);
+      document.removeEventListener("visibilitychange", visibilityHandler);
+    };
   }, []);
 
   const toggle = () => {

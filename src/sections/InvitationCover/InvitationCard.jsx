@@ -116,7 +116,7 @@ export default function InvitationCard({ guestName, onOpen }) {
         transition={{ delay: 1.8 }}
         className="mt-2 text-sm text-white/40"
       >
-        Una invitación para
+        Una invitación exclusiva para
       </motion.p>
 
       <motion.h2
