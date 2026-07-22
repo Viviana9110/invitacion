@@ -1,8 +1,6 @@
 const guests = [
   
 { name: "Tio Juan Carlos", phone: "573154321804"  },
-{ name: "Tio Juan Carlos, María Ligia y Cristoper", phone: "573144362023" },
-{ name: " María Alejandra, Esposo y Emiliana", phone: "5734637946585" },
 { name: "Tio Hernando", phone: "573128472662" },
 { name: "Abuela Elisa, Tia Elizabeth y Juan Manuel", phone: "573142516331 " },
 { name: "Abuela Elisa, Tia Elizabeth y Juan Manuel", phone: "573104897088" },
