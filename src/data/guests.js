@@ -1,6 +1,6 @@
 const guests = [
   
-{ name: "Tio Juan Carlos", phone: "573154321804"  },
+{ name: "Tio Juan Carlos", phone: "573154321804" },
 { name: "Tio Hernando", phone: "573128472662" },
 { name: "Abuela Elisa, Tia Elizabeth y Juan Manuel", phone: "573142516331 " },
 { name: "Abuela Elisa, Tia Elizabeth y Juan Manuel", phone: "573104897088" },
@@ -8,7 +8,7 @@ const guests = [
 { name: "Carolina Yepes García", phone: "573136466443" },
 { name: "Uriel Uberto y Patricia", phone: "573115139643" },
 { name: "Diana Patrica Correa", phone: "573117669073" },
-{ name: "Duvan Parada", phone: "573127326658" },
+{ name: "Duvan y Carolina", phone: "573127326658" },
 { name: "Daniela y Juan David", phone: "573006866742" },
 { name: "Tia Angela y Germán", phone: "573012574424" },
 { name: "Sebastian y Maritza", phone: "573002246375" },
@@ -41,7 +41,7 @@ const guests = [
 { name: "Daniel Sánchez y María Antonia Zapata", phone: "573135783233" },
 { name: "Eliana Sánchez y Alejandro Cardona", phone: "573217834554" },
 { name: "Jose Fabián, Tatiana, Andrea, Antony, Stiven, Juan Felipe y Juan Manuel", phone: "573138917490" },
-{ name: "Jhony Ferney y Alejandra", phone: "57304339394" },
+{ name: "Jhony Ferney y Alejandra", phone: "573043393694" },
 { name: "Jhon Fredy Restrepo y Yineth", phone: "573103767797" },
 { name: "Orlando Cárdenas y Beatriz Eugenia", phone: "56983063929" },
 { name: "Viviana Londoño", phone: "573137622767" },
@@ -64,7 +64,6 @@ const guests = [
 { name: "Mónica Castaño López y Mariano Medina", phone: "573134555765" },
 { name: "Juliana Luna y Julio César García", phone: "573127045957" },
 { name: "Katherine Cardona y Diego Vasquez", phone: "573136574205" },
-
 
 ];
 
