@@ -48,6 +48,16 @@ export default function Footer() {
           <p className="mt-8 text-xs text-white/20 tracking-[2px] uppercase">
             Hecho con amor
           </p>
+
+          <p className="mt-6 text-lg text-white/30 font-display italic">
+            Viviana Londoño Naranjo
+          </p>
+          <p className="mt-2 text-xs text-white/20 tracking-[1px]">
+            Desarrolladora Web
+          </p>
+          <p className="mt-1 text-xs text-white/20 tracking-[1px]">
+            Contacto: 3137622767
+          </p>
         </motion.div>
       </div>
     </footer>
